@@ -19,8 +19,14 @@ docker run -it -p 8080:8080 --name hello-world-node hello-world-node:latest
 ### Run on Cloud Foudry
 
 ```bash
-cf push
+# target a cloud foundry region
+ibmcloud target --cf
+
+# push the app
+ibmcloud cf push hello-world-node
 ```
+
+> **NOTE**: We should have a `manifest.yml` defined for Cloud Foundry but we can bypass that as it auto-detects Node is required because of the `package.json` file in the top level.
 
 ## Run on IBM Kubernetes Service
 
@@ -48,5 +54,9 @@ kubectl get services -o wide
 ### Run on OpenShift
 
 ```bash
-oc new-app
+oc login
+oc new-project samples
+oc new-app nodejs~https://github.com/ibm/node-hello-world-minimal.git
+oc expose svc/node-hello-world-minimal
+oc get routes
 ```
