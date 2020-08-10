@@ -16,7 +16,7 @@ docker build -t node-hello-world:latest .
 docker run -it -p 8080:8080 --name node-hello-world node-hello-world:latest
 ```
 
-### Run on Cloud Foudry
+## Run on Cloud Foudry
 
 ```bash
 # target a cloud foundry region
@@ -51,7 +51,7 @@ kubectl rollout status deployment/node-hello-world
 kubectl get services -o wide
 ```
 
-### Run on OpenShift
+## Run on OpenShift
 
 ```bash
 oc login
