@@ -24,16 +24,20 @@ cf push
 
 ## Run on IBM Kubernetes Service
 
+Ensure the container image URL is updated in [deployment.yaml](config/deployment.yaml).
+
 ```bash
 # ibmcloud login  -r us-south -g default
 # ibmcloud cr region-set us-south
 # ibmcloud cr login
 
 # build and push to ICR
+# update the container registry to match your own namespace
 docker build -t us.icr.io/samples/hello-world-node:v1 .
 docker push us.icr.io/samples/hello-world-node:v1
 
 # deploy to IKS
+# update the cluster id field to match your IKS instance
 ibmcloud ks cluster config --cluster <cluster-id>
 kubectl config current-context
 kubectl apply -f config/
