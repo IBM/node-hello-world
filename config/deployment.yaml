@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hello-world-node
+  name: hello-world-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world-node
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hello-world-node
+    spec:
+      containers:
+      - image: us.icr.io/samples/hello-world-node:v1
+        name: hello-world-node
+        resources: {}
+status: {}

@@ -13,7 +13,7 @@ npm start
 
 ```bash
 docker build -f Dockerfile -t hello-world-node:latest .
-docker run -it -p 8080:8080 --name hello_node hello-world-node:latest
+docker run -it -p 8080:8080 --name hello-world-node hello-world-node:latest
 ```
 
 ### Run on Cloud Foudry
@@ -22,10 +22,23 @@ docker run -it -p 8080:8080 --name hello_node hello-world-node:latest
 cf push
 ```
 
-## Run on Kubernetes
+## Run on IBM Kubernetes Service
 
 ```bash
-kubectl
+# ibmcloud login  -r us-south -g default
+# ibmcloud cr region-set us-south
+# ibmcloud cr login
+
+# build and push to ICR
+docker build -t us.icr.io/samples/hello-world-node:v1 .
+docker push us.icr.io/samples/hello-world-node:v1
+
+# deploy to IKS
+ibmcloud ks cluster config --cluster <cluster-id>
+kubectl config current-context
+kubectl apply -f config/
+kubectl rollout status deployment/hello-world-node
+kubectl get services -o wide
 ```
 
 ### Run on OpenShift
