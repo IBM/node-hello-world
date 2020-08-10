@@ -5,31 +5,31 @@ This repo contains a minimal hello world application written in Node. This repo 
 ## Run locally
 
 ```bash
-$ npm install
-$ npm start
+npm install
+npm start
 ```
 
 ## Run in a container
 
 ```bash
-$ docker build -f Dockerfile -t hello-python:latest .
-$ docker run -it -p 5001:5001 --name hello_python hello-python:latest
+docker build -f Dockerfile -t hello-world-node:latest .
+docker run -it -p 8080:8080 --name hello_node hello-world-node:latest
 ```
 
 ### Run on Cloud Foudry
 
 ```bash
-$ cf push
+cf push
 ```
 
 ## Run on Kubernetes
 
 ```bash
-$ kubectl
+kubectl
 ```
 
 ### Run on OpenShift
 
 ```bash
-$ oc new-app
+oc new-app
 ```
