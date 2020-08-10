@@ -3,8 +3,8 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: hello-world-node
-  name: hello-world-node
+    app: node-hello-world
+  name: node-hello-world
 spec:
   ports:
   - name: 80-8080
@@ -12,7 +12,7 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    app: hello-world-node
+    app: node-hello-world
   type: LoadBalancer
 status:
   loadBalancer: {}

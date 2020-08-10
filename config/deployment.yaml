@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: hello-world-node
-  name: hello-world-node
+    app: node-hello-world
+  name: node-hello-world
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-world-node
+      app: node-hello-world
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: hello-world-node
+        app: node-hello-world
     spec:
       containers:
-      - image: us.icr.io/samples/hello-world-node:v1
-        name: hello-world-node
+      - image: us.icr.io/samples/node-hello-world:v1
+        name: node-hello-world
         resources: {}
 status: {}
