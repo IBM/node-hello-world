@@ -1,0 +1,13 @@
+{
+  "name": "node-hello-world-minimal",
+  "version": "1.0.0",
+  "description": "Node.js minimal example",
+  "author": "Steve Martinelli <s.martinelli@gmail.com>",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
