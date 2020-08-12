@@ -25,7 +25,7 @@ Details about the Cloud Foundry deployment can be found in [manifest.yml](manife
 ibmcloud target --cf
 
 # push the app
-ibmcloud cf push node-hello-world
+ibmcloud cf push
 ```
 
 ## Run on IBM Kubernetes Service
