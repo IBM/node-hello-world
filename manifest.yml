@@ -1,0 +1,8 @@
+---
+applications:
+- path: .
+    name: node-hello-world
+    buildpack: sdk-for-nodejs
+    memory: 256M
+    instances: 1
+    random-route: false

@@ -18,6 +18,8 @@ docker run -it -p 8080:8080 --name node-hello-world node-hello-world:latest
 
 ## Run on Cloud Foudry
 
+Details about the Cloud Foundry deployment can be found in [manifest.yml](manifest.yml).
+
 ```bash
 # target a cloud foundry region
 ibmcloud target --cf
@@ -25,8 +27,6 @@ ibmcloud target --cf
 # push the app
 ibmcloud cf push node-hello-world
 ```
-
-> **NOTE**: We should have a `manifest.yml` defined for Cloud Foundry but we can bypass that as it auto-detects Node is required because of the `package.json` file in the top level.
 
 ## Run on IBM Kubernetes Service
 
