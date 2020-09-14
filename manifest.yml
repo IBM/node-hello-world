@@ -1,8 +1,8 @@
 ---
 applications:
 - path: .
-  name: node-hello-world-stevemar
+  name: node-hello-world-example
   buildpack: sdk-for-nodejs
   memory: 256M
   instances: 1
-  random-route: false
+  random-route: true
