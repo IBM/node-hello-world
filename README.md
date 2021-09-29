@@ -1,4 +1,4 @@
-# Minimal Node.js Hello World example
+# Minimal Node.js example
 
 This repo contains a minimal hello world application written in Node. This repo will document the many ways you can deploy this application.
 
